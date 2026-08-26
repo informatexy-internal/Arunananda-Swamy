@@ -55,7 +55,7 @@
   img,svg{ max-width:100%; display:block; }
 
   .wrap{ max-width:1180px; margin:0 auto; padding:0 24px; }
-  @media (max-width:640px){ .wrap{ padding:0 20px; } }
+  @media (max-width:640px){ .wrap, .foot-inner, .foot-note{ padding-left:20px; padding-right:20px; } }
 
   /* ---- Nav ---- */
   .nav-shell{ position:sticky; top:0; z-index:20; padding:14px 20px; }
@@ -159,12 +159,12 @@
 
   /* ---- Footer ---- */
   footer{ padding:56px 20px 40px; border-top:1px solid var(--line); }
-  .foot-inner{ max-width:1180px; margin:0 auto; display:flex; justify-content:space-between; gap:32px; flex-wrap:wrap; }
+  .foot-inner{ max-width:1180px; margin:0 auto; padding:0 24px; display:flex; justify-content:space-between; gap:32px; flex-wrap:wrap; }
   .foot-brand{ display:flex; align-items:center; gap:8px; font-family:"Fraunces",serif; font-size:16px; }
   .foot-links{ display:flex; gap:28px; flex-wrap:wrap; font-size:13px; color:var(--ink-soft); }
   .foot-links a{ text-decoration:none; }
   .foot-links a:hover{ color:var(--ink); }
-  .foot-note{ margin-top:24px; font-size:12px; color:var(--ink-faint); max-width:1180px; margin-left:auto; margin-right:auto; }
+  .foot-note{ margin-top:24px; font-size:12px; color:var(--ink-faint); max-width:1180px; margin-left:auto; margin-right:auto; padding:0 24px; }
 </style>
 </head>
 <body>
