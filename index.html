@@ -122,8 +122,10 @@
   .video-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:22px; }
   .video-card{ background:var(--bg-raised); border:1px solid rgba(54,42,32,.1); border-radius:16px; overflow:hidden; box-shadow:var(--shadow); text-decoration:none; color:inherit; display:flex; flex-direction:column; transition:transform .15s ease; }
   .video-card:hover{ transform:translateY(-3px); }
-  .video-thumb{ aspect-ratio:16/9; position:relative; display:flex; align-items:center; justify-content:center; }
-  .video-thumb .play{ width:52px; height:52px; border-radius:50%; background:rgba(255,255,255,.92); display:flex; align-items:center; justify-content:center; box-shadow:0 4px 14px rgba(0,0,0,.25); }
+  .video-thumb{ aspect-ratio:16/9; position:relative; display:flex; align-items:center; justify-content:center; background:var(--bg-alt); }
+  .video-thumb img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+  .video-thumb::after{ content:""; position:absolute; inset:0; background:linear-gradient(180deg, rgba(0,0,0,0) 55%, rgba(0,0,0,.35) 100%); }
+  .video-thumb .play{ position:relative; z-index:1; width:52px; height:52px; border-radius:50%; background:rgba(255,255,255,.92); display:flex; align-items:center; justify-content:center; box-shadow:0 4px 14px rgba(0,0,0,.25); }
   .video-thumb .play svg{ width:18px; height:18px; margin-left:2px; }
   .video-lang{ position:absolute; top:12px; left:12px; font-size:10.5px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; background:rgba(27,23,18,.55); color:#fff; padding:4px 9px; border-radius:999px; }
   .video-body{ padding:16px 18px 20px; display:flex; flex-direction:column; gap:8px; flex:1; }
@@ -225,7 +227,8 @@
     <div class="video-grid">
 
       <a class="video-card" href="https://www.youtube.com/watch?v=nMYUarY5q-w" target="_blank" rel="noopener">
-        <div class="video-thumb" style="background:linear-gradient(135deg,#C98A46,#8A3F2A);">
+        <div class="video-thumb">
+          <img src="https://img.youtube.com/vi/nMYUarY5q-w/hqdefault.jpg" alt="" loading="lazy">
           <span class="video-lang">Hindi</span>
           <span class="play"><svg viewBox="0 0 24 24" fill="#8A3F2A"><path d="M8 5v14l11-7z"/></svg></span>
         </div>
@@ -238,7 +241,8 @@
       </a>
 
       <a class="video-card" href="https://www.youtube.com/watch?v=4kWIZqagLPY" target="_blank" rel="noopener">
-        <div class="video-thumb" style="background:linear-gradient(135deg,#2E3D42,#4A5A5F);">
+        <div class="video-thumb">
+          <img src="https://img.youtube.com/vi/4kWIZqagLPY/hqdefault.jpg" alt="" loading="lazy">
           <span class="video-lang">English</span>
           <span class="play"><svg viewBox="0 0 24 24" fill="#2E3D42"><path d="M8 5v14l11-7z"/></svg></span>
         </div>
@@ -251,7 +255,8 @@
       </a>
 
       <a class="video-card" href="https://www.youtube.com/watch?v=3pP7It3KZjE" target="_blank" rel="noopener">
-        <div class="video-thumb" style="background:linear-gradient(135deg,#E2D8C1,#B5652B);">
+        <div class="video-thumb">
+          <img src="https://img.youtube.com/vi/3pP7It3KZjE/hqdefault.jpg" alt="" loading="lazy">
           <span class="video-lang">English</span>
           <span class="play"><svg viewBox="0 0 24 24" fill="#B5652B"><path d="M8 5v14l11-7z"/></svg></span>
         </div>
@@ -264,7 +269,8 @@
       </a>
 
       <a class="video-card" href="https://www.youtube.com/watch?v=Q7Y2sKwe1BE" target="_blank" rel="noopener">
-        <div class="video-thumb" style="background:linear-gradient(135deg,#8A3F2A,#E38F6C);">
+        <div class="video-thumb">
+          <img src="https://img.youtube.com/vi/Q7Y2sKwe1BE/hqdefault.jpg" alt="" loading="lazy">
           <span class="video-lang">Hindi</span>
           <span class="play"><svg viewBox="0 0 24 24" fill="#8A3F2A"><path d="M8 5v14l11-7z"/></svg></span>
         </div>
