@@ -3,6 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<script>
+(function(){
+  try {
+    var t = localStorage.getItem('arunananda-theme');
+    if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+  } catch(e){}
+})();
+</script>
 <title>Arunananda — Yogi Arunananda Muni</title>
 <meta name="description" content="Mudras, acupressure points, and daily practices for physical, mental, and spiritual balance — taught plainly in Hindi and English by Yogi Arunananda Muni. New guidance every week on YouTube and WhatsApp.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Ccircle cx='20' cy='20' r='18.5' fill='%232E3D42'/%3E%3Cpath d='M20 9C24 15 26 19 26 23.5 26 28.5 23.3 31.5 20 31.5 16.7 31.5 14 28.5 14 23.5 14 19 16 15 20 9Z' fill='%23E0A050'/%3E%3Cpath d='M20 15C22 18.5 23 21 23 23.5 23 26.7 21.8 28.5 20 28.5 18.2 28.5 17 26.7 17 23.5 17 21 18 18.5 20 15Z' fill='%238A3F2A'/%3E%3C/svg%3E">
@@ -70,6 +78,22 @@
   .nav-links a{ opacity:.82; text-decoration:none; }
   .nav-links a:hover{ opacity:1; }
   @media (max-width:760px){ .nav-links{ display:none; } }
+  .nav-right{ display:flex; align-items:center; gap:12px; }
+  .theme-toggle{
+    width:36px; height:36px; flex-shrink:0; border-radius:50%; border:1px solid rgba(237,230,214,.3);
+    background:transparent; color:var(--dusk-ink); display:flex; align-items:center; justify-content:center; cursor:pointer;
+  }
+  .theme-toggle:hover{ border-color:rgba(237,230,214,.6); }
+  .theme-toggle:focus-visible{ outline:2px solid var(--accent); outline-offset:2px; }
+  .theme-toggle svg{ width:16px; height:16px; }
+  .theme-toggle .icon-sun{ display:none; }
+  .theme-toggle .icon-moon{ display:block; }
+  :root[data-theme="dark"] .theme-toggle .icon-sun{ display:block; }
+  :root[data-theme="dark"] .theme-toggle .icon-moon{ display:none; }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]) .theme-toggle .icon-sun{ display:block; }
+    :root:not([data-theme="light"]) .theme-toggle .icon-moon{ display:none; }
+  }
   .btn{
     display:inline-flex; align-items:center; gap:8px; border-radius:999px; padding:12px 24px;
     font-family:"Karla",sans-serif; font-weight:700; font-size:14px; letter-spacing:.01em;
@@ -141,6 +165,17 @@
   .pillar-card h3{ font-size:19px; margin-bottom:10px; }
   .pillar-card p{ font-size:13.5px; line-height:1.6; color:var(--ink-soft); }
 
+  /* ---- Bio + ashram ---- */
+  .bio-grid{ display:grid; grid-template-columns:1.1fr .9fr; gap:40px; align-items:start; margin-bottom:40px; }
+  @media (max-width:900px){ .bio-grid{ grid-template-columns:1fr; } }
+  .bio-copy p{ font-size:15.5px; line-height:1.75; color:var(--ink-soft); }
+  .ashram-card{ background:var(--bg-raised); border:1px solid rgba(54,42,32,.1); border-radius:16px; padding:28px; box-shadow:var(--shadow); }
+  .ashram-kicker{ display:flex; align-items:center; gap:8px; font-size:11.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--accent-deep); font-weight:700; }
+  .ashram-kicker svg{ width:14px; height:14px; }
+  .ashram-card h3{ margin-top:12px; font-size:20px; }
+  .ashram-card p{ margin-top:12px; font-size:13.5px; line-height:1.65; color:var(--ink-soft); }
+  .ashram-card .btn{ margin-top:20px; }
+
   /* ---- Teaching / mission block ---- */
   .teach-block{ background:var(--dusk); color:var(--dusk-ink); border-radius:20px; padding:52px 44px; position:relative; }
   .teach-mark{ font-family:"Yatra One",serif; font-size:19px; color:var(--accent); margin-bottom:18px; }
@@ -190,7 +225,13 @@
       <a href="#about">About</a>
       <a href="#join">WhatsApp</a>
     </div>
-    <a class="btn btn-primary btn-sm" href="https://www.youtube.com/@yogiarunanandamuni" target="_blank" rel="noopener">Watch on YouTube</a>
+    <div class="nav-right">
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to dark theme">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="currentColor"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+      <a class="btn btn-primary btn-sm" href="https://www.youtube.com/@yogiarunanandamuni" target="_blank" rel="noopener">Watch on YouTube</a>
+    </div>
   </nav>
 </div>
 
@@ -328,6 +369,26 @@
   <div class="wrap">
     <div class="chapter-head">
       <div>
+        <div class="chapter-eyebrow">About</div>
+        <h2>Sri Sri Yogi Arunananda Muni</h2>
+      </div>
+    </div>
+    <div class="bio-grid">
+      <div class="bio-copy">
+        <p>Sri Sri Yogi Arunananda Muni received his spiritual education in Rishikesh, one of India's most revered centers of yoga and meditation. He later spent several years in the Himalayas in deep meditation, self-inquiry, and spiritual practice, seeking the direct realization of the true Self. His life reflects a commitment to inner transformation, simplicity, and the timeless wisdom of the yogic tradition.</p>
+      </div>
+      <div class="ashram-card">
+        <div class="ashram-kicker">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Where he resides
+        </div>
+        <h3>Ananda Ashram</h3>
+        <p>Near Dang Village, in the forests of Dang District, Gujarat, India — an environment of natural serenity suited to meditation, self-discipline, and spiritual contemplation. Devotees and seekers visit to experience inner peace and receive guidance on the path of self-realization and holistic living.</p>
+        <a class="btn btn-outline btn-sm" href="https://maps.app.goo.gl/DDUrNAy5LizzPP6t8?g_st=aw" target="_blank" rel="noopener">Get directions ↗</a>
+      </div>
+    </div>
+    <div class="chapter-head">
+      <div>
         <div class="chapter-eyebrow">About the channel</div>
         <h2>Three kinds of development, taught together</h2>
       </div>
@@ -390,6 +451,30 @@
     <p class="foot-note">All videos are from Yogi Arunananda Muni's official YouTube channel, @yogiarunanandamuni. Shared for educational purposes only — not a substitute for professional medical advice, diagnosis, or treatment.</p>
   </div>
 </footer>
+
+<script>
+(function(){
+  var root = document.documentElement;
+  var btn = document.getElementById('themeToggle');
+  if (!btn) return;
+  function isDark(){
+    var t = root.getAttribute('data-theme');
+    if (t === 'dark') return true;
+    if (t === 'light') return false;
+    return matchMedia('(prefers-color-scheme: dark)').matches;
+  }
+  function sync(){
+    btn.setAttribute('aria-label', isDark() ? 'Switch to light theme' : 'Switch to dark theme');
+  }
+  btn.addEventListener('click', function(){
+    var next = isDark() ? 'light' : 'dark';
+    root.setAttribute('data-theme', next);
+    try { localStorage.setItem('arunananda-theme', next); } catch(e){}
+    sync();
+  });
+  sync();
+})();
+</script>
 
 </body>
 </html>
