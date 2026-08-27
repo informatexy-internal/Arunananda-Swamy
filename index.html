@@ -182,6 +182,20 @@
   .teach-block p.stmt{ font-family:"Fraunces",serif; font-style:italic; font-size:23px; line-height:1.55; max-width:760px; }
   .teach-attr{ margin-top:22px; font-size:12.5px; letter-spacing:.08em; text-transform:uppercase; opacity:.68; }
 
+  /* ---- Welfare grid (placeholder content, pending real copy/photos) ---- */
+  .welfare-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:22px; }
+  .welfare-card{ background:var(--bg-raised); border:1px solid rgba(54,42,32,.1); border-radius:16px; overflow:hidden; box-shadow:var(--shadow); display:flex; flex-direction:column; }
+  .welfare-media{
+    aspect-ratio:16/9; display:flex; align-items:center; justify-content:center; text-align:center; padding:12px;
+    color:var(--ink-faint); font-size:11.5px; letter-spacing:.06em; text-transform:uppercase; border-bottom:1px dashed var(--line);
+    background:repeating-linear-gradient(45deg, var(--bg-alt), var(--bg-alt) 10px, transparent 10px, transparent 20px);
+  }
+  .welfare-body{ padding:18px 20px 22px; display:flex; flex-direction:column; gap:8px; }
+  .welfare-tag{ font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--accent-deep); font-weight:700; }
+  .welfare-body h3{ font-size:17px; }
+  .welfare-body p{ font-size:13.5px; line-height:1.6; color:var(--ink-soft); font-style:italic; }
+  .placeholder-note{ margin-top:24px; font-size:12.5px; line-height:1.6; color:var(--ink-faint); background:var(--bg-raised); border:1px dashed var(--line); border-radius:12px; padding:14px 18px; }
+
   /* ---- WhatsApp CTA band ---- */
   .cta-band{
     border-radius:20px; padding:44px; display:flex; align-items:center; justify-content:space-between; gap:28px; flex-wrap:wrap;
@@ -398,6 +412,45 @@
       <p class="stmt">The channel's stated purpose: to help people develop life in a multidimensional way (physical, mental, and spiritual) so that, in time, they find answers to life's fundamental questions.</p>
       <div class="teach-attr">Yogi Arunananda Muni · from the channel's About section</div>
     </div>
+  </div>
+</section>
+
+<section class="chapter" id="welfare">
+  <div class="wrap">
+    <div class="chapter-head">
+      <div>
+        <div class="chapter-eyebrow">Beyond the channel</div>
+        <h2>Community and welfare work</h2>
+      </div>
+      <p class="chapter-desc">[Placeholder — replace with a short line on the scope of this work, e.g. how often, where, and who it reaches.]</p>
+    </div>
+    <div class="welfare-grid">
+      <div class="welfare-card">
+        <div class="welfare-media">[ Add photo ]</div>
+        <div class="welfare-body">
+          <span class="welfare-tag">[Category]</span>
+          <h3>[Initiative title]</h3>
+          <p>[Replace with a real description of this activity, pulled from the actual YouTube community post.]</p>
+        </div>
+      </div>
+      <div class="welfare-card">
+        <div class="welfare-media">[ Add photo ]</div>
+        <div class="welfare-body">
+          <span class="welfare-tag">[Category]</span>
+          <h3>[Initiative title]</h3>
+          <p>[Replace with a real description of this activity, pulled from the actual YouTube community post.]</p>
+        </div>
+      </div>
+      <div class="welfare-card">
+        <div class="welfare-media">[ Add photo ]</div>
+        <div class="welfare-body">
+          <span class="welfare-tag">[Category]</span>
+          <h3>[Initiative title]</h3>
+          <p>[Replace with a real description of this activity, pulled from the actual YouTube community post.]</p>
+        </div>
+      </div>
+    </div>
+    <p class="placeholder-note">This section is a placeholder. YouTube's Community tab can't be scraped automatically, so each card needs its real photo, title, and description swapped in from the actual posts before this goes live.</p>
   </div>
 </section>
 
