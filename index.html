@@ -185,6 +185,16 @@
   .teach-block p.stmt{ font-family:"Fraunces",serif; font-style:italic; font-size:23px; line-height:1.55; max-width:760px; }
   .teach-attr{ margin-top:22px; font-size:12.5px; letter-spacing:.08em; text-transform:uppercase; opacity:.68; }
 
+  /* ---- Forest retreats (placeholder content, pending real details) ---- */
+  .retreat-grid{ display:grid; grid-template-columns:1.3fr 1fr; gap:40px; align-items:start; margin-bottom:28px; }
+  @media (max-width:900px){ .retreat-grid{ grid-template-columns:1fr; } }
+  .retreat-copy p{ font-size:15.5px; line-height:1.75; color:var(--ink-soft); }
+  .retreat-facts{ display:flex; flex-direction:column; gap:14px; background:var(--bg-raised); border:1px solid rgba(54,42,32,.1); border-radius:16px; padding:24px; box-shadow:var(--shadow); }
+  .retreat-fact{ display:flex; justify-content:space-between; align-items:baseline; gap:12px; font-size:13.5px; padding-bottom:14px; border-bottom:1px dashed var(--line); }
+  .retreat-fact:last-child{ border-bottom:none; padding-bottom:0; }
+  .retreat-fact-label{ font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:var(--accent-deep); font-weight:700; }
+  .retreat-fact-value{ text-align:right; color:var(--ink-soft); }
+
   /* ---- Welfare grid (placeholder content, pending real copy/photos) ---- */
   .welfare-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:22px; }
   .welfare-card{ background:var(--bg-raised); border:1px solid rgba(54,42,32,.1); border-radius:16px; overflow:hidden; box-shadow:var(--shadow); display:flex; flex-direction:column; }
@@ -422,6 +432,35 @@
     </div>
   </div>
 </section>
+
+<!--
+Forest retreats section held back until real details replace the placeholders below. Un-comment once ready.
+
+<section class="chapter alt" id="retreats">
+  <div class="wrap">
+    <div class="chapter-head">
+      <div>
+        <div class="chapter-eyebrow">Beyond the videos</div>
+        <h2>Forest retreats at Ananda Ashram</h2>
+      </div>
+      <p class="chapter-desc">[Placeholder, replace with a line on who this is for and what the retreat centers on.]</p>
+    </div>
+    <div class="retreat-grid">
+      <div class="retreat-copy">
+        <p>Set in the forests of Dang District, Gujarat, Ananda Ashram is where Yogi Arunananda Muni lives and teaches in person. [Placeholder, add a paragraph on what a retreat actually involves: daily schedule, practices covered, group vs one-on-one time.]</p>
+      </div>
+      <div class="retreat-facts">
+        <div class="retreat-fact"><span class="retreat-fact-label">Location</span><span class="retreat-fact-value">Ananda Ashram, Dang District, Gujarat</span></div>
+        <div class="retreat-fact"><span class="retreat-fact-label">Duration</span><span class="retreat-fact-value">[Placeholder]</span></div>
+        <div class="retreat-fact"><span class="retreat-fact-label">Group size</span><span class="retreat-fact-value">[Placeholder]</span></div>
+        <div class="retreat-fact"><span class="retreat-fact-label">Includes</span><span class="retreat-fact-value">[Placeholder, meals, stay, sessions?]</span></div>
+      </div>
+    </div>
+    <a class="btn btn-primary" href="https://whatsapp.com/channel/0029Vb6wcL9GU3BBZR7YyC0w" target="_blank" rel="noopener">Ask about the next retreat</a>
+    <p class="placeholder-note">This section needs real retreat details, schedule, pricing, dates, what's included, and how people actually register, before it goes live.</p>
+  </div>
+</section>
+-->
 
 <!--
 Welfare section held back until real content replaces the placeholders below. Un-comment once ready.
