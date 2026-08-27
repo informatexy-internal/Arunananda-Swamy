@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <title>Udaya mark — Arunananda</title>
+  <defs>
+    <linearGradient id="udayaGrad" x1="0" y1="100" x2="100" y2="0">
+      <stop offset="0%" stop-color="#8A3F2A"/>
+      <stop offset="55%" stop-color="#B5652B"/>
+      <stop offset="100%" stop-color="#E0A050"/>
+    </linearGradient>
+  </defs>
+  <path d="M 66.06 84.44 A 38 38 0 1 1 84.44 66.06" fill="none" stroke="url(#udayaGrad)" stroke-width="7.5" stroke-linecap="round"/>
+</svg>

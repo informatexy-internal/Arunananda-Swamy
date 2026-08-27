@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 90">
+  <title>Girivas mark — Arunananda</title>
+  <defs>
+    <linearGradient id="giriGrad" x1="50" y1="30" x2="80" y2="0">
+      <stop offset="0%" stop-color="#B5652B"/>
+      <stop offset="100%" stop-color="#E0A050"/>
+    </linearGradient>
+  </defs>
+  <path d="M 8 80 L 30 40 L 43 58 L 63 24 L 80 50 L 92 80 Z" fill="#2E3D42"/>
+  <g stroke="url(#giriGrad)" stroke-width="2" stroke-linecap="round">
+    <line x1="63" y1="8" x2="63" y2="4"/>
+    <line x1="67.24" y1="9.76" x2="69.36" y2="7.64"/>
+    <line x1="58.76" y1="9.76" x2="56.64" y2="7.64"/>
+  </g>
+  <circle cx="63" cy="14" r="4.5" fill="url(#giriGrad)"/>
+</svg>
