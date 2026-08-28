@@ -179,7 +179,11 @@
   .ashram-card p{ margin-top:12px; font-size:13.5px; line-height:1.65; color:var(--ink-soft); }
   .ashram-card .btn{ margin-top:20px; }
 
-  /* ---- Teaching / mission block ---- */
+  /* ---- Seal + Teaching / mission block ---- */
+  .seal-grid{ display:grid; grid-template-columns:.7fr 1.3fr; gap:40px; align-items:center; }
+  @media (max-width:900px){ .seal-grid{ grid-template-columns:1fr; } }
+  .seal-wrap{ display:flex; align-items:center; justify-content:center; }
+  .seal-badge{ width:100%; max-width:280px; border-radius:50%; box-shadow:var(--shadow); }
   .teach-block{ background:var(--dusk); color:var(--dusk-ink); border-radius:20px; padding:52px 44px; position:relative; }
   .teach-mark{ font-family:"Yatra One",serif; font-size:19px; color:var(--accent); margin-bottom:18px; }
   .teach-block p.stmt{ font-family:"Fraunces",serif; font-style:italic; font-size:23px; line-height:1.55; max-width:760px; }
@@ -425,10 +429,15 @@
         <h2>Three kinds of development, taught together</h2>
       </div>
     </div>
-    <div class="teach-block">
-      <div class="teach-mark">अरुणानंद</div>
-      <p class="stmt">The channel's stated purpose: to help people develop life in a multidimensional way (physical, mental, and spiritual) so that, in time, they find answers to life's fundamental questions.</p>
-      <div class="teach-attr">Yogi Arunananda Muni · from the channel's About section</div>
+    <div class="seal-grid">
+      <div class="seal-wrap">
+        <img class="seal-badge" src="assets/image.png" alt="Yogi Arunananda Muni emblem — Ananda Ashram" loading="lazy">
+      </div>
+      <div class="teach-block">
+        <div class="teach-mark">अरुणानंद</div>
+        <p class="stmt">The channel's stated purpose: to help people develop life in a multidimensional way (physical, mental, and spiritual) so that, in time, they find answers to life's fundamental questions.</p>
+        <div class="teach-attr">Yogi Arunananda Muni · from the channel's About section</div>
+      </div>
     </div>
   </div>
 </section>
